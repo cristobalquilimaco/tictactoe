@@ -16,7 +16,7 @@ function App() {
 
 const [turn, setTurn] = useState(() => {
   const turnFromStorage = window.localStorage.getItem('turn')
-  return turnFromStorage ?? TURNS.x
+  return turnFromStorage ?? TURNS.X
 
 })
 
@@ -26,7 +26,7 @@ const [winner, setWinner] = useState(null)
 
 const resetGame = () => {
   setBoard(Array(9).fill(null))
-  setTurn(TURNS.x)
+  setTurn(TURNS.X)
   setWinner(null)
 
   resetGameStorage()
@@ -43,7 +43,7 @@ newBoard[index] = turn
 setBoard(newBoard)
 //se cambia el turno
 
-const newTurn = turn === TURNS.x ? TURNS.o : TURNS.x
+const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
 setTurn(newTurn)
 //Aqui se guarda tu partida
 
@@ -60,8 +60,6 @@ if(winner){
     setWinner(false) //empate
   }
 }
-
-
 
 
 
@@ -87,11 +85,11 @@ return (
     </section>
 
     <section className='turn'>
-      <Square isSelected={turn === TURNS.x}>
-        {TURNS.o}
+      <Square isSelected={turn === TURNS.X}>
+        {TURNS.X}
       </Square>
-      <Square isSelected={turn === TURNS.o}>
-        {TURNS.o}
+      <Square isSelected={turn === TURNS.O}>
+        {TURNS.O}
       </Square>
     </section>
 
