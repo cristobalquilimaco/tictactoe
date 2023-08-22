@@ -20,7 +20,7 @@ function App () {
     return turnFromStorage ?? TURNS.X
   })
 
-  // null es que no hay ganador, false es que hay un empate
+
   const [winner, setWinner] = useState(null)
 
   const resetGame = () => {
@@ -32,28 +32,27 @@ function App () {
   }
 
   const updateBoard = (index) => {
-    // no actualizamos esta posición
-    // si ya tiene algo
+
     if (board[index] || winner) return
-    // actualizar el tablero
+  
     const newBoard = [...board]
     newBoard[index] = turn
     setBoard(newBoard)
-    // cambiar el turno
+
     const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X
     setTurn(newTurn)
-    // guardar aqui partida
+
     saveGameToStorage({
       board: newBoard,
       turn: newTurn
     })
-    // revisar si hay ganador
+
     const newWinner = checkWinnerFrom(newBoard)
     if (newWinner) {
       confetti()
       setWinner(newWinner)
     } else if (checkEndGame(newBoard)) {
-      setWinner(false) // empate
+      setWinner(false) 
     }
   }
 
