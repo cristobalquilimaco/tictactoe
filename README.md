@@ -1,8 +1,5 @@
-# React + Vite
+// Aplicación web de Tic Tac Toe con efectos de celebración
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta aplicación web es emocionante y moderna que interpreta el famoso juego llamado tic tac toe o tambien conocido como "la vieja" desarrollado utilizando tecnologías avanzadas, combina la potencia de React, la flexibilidad de HTML y CSS, y un toque de alegria con una libreria de confetti para crear una experiencia de juego única y atractiva.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
